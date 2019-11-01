@@ -17,14 +17,14 @@ var Task = function () {
         this._title = title;
         this.done = false;
         Task.count += 1;
-        console.log('Creation task');
+        // console.log('Creation task');
     }
 
     _createClass(Task, [{
         key: 'complete',
         value: function complete() {
             this.done = true;
-            console.log('Task "' + this.title + '" completed');
+            // console.log(`Task "${this.title}" completed`);
         }
     }, {
         key: 'title',
@@ -55,7 +55,7 @@ var SubTask = function (_Task) {
         var _this = _possibleConstructorReturn(this, (SubTask.__proto__ || Object.getPrototypeOf(SubTask)).call(this, title));
 
         _this.parent = parent;
-        console.log('Creation subtask');
+        // console.log('Creation subtask');
         return _this;
     }
 
@@ -63,8 +63,8 @@ var SubTask = function (_Task) {
         key: 'complete',
         value: function complete() {
             _get(SubTask.prototype.__proto__ || Object.getPrototypeOf(SubTask.prototype), 'complete', this).call(this);
-            // this.done = true;
-            console.log('Subtask "' + this.title + '" completed');
+            //// this.done = true;
+            // console.log(`Subtask "${this.title}" completed`);
         }
     }]);
 
@@ -74,14 +74,14 @@ var SubTask = function (_Task) {
 var task = new Task('Learn JS');
 var subtask = new SubTask('Learn ES6', task);
 
-console.log(SubTask.getDefaultTitle());
-console.log(SubTask.count);
+// console.log(SubTask.getDefaultTitle());
+// console.log(SubTask.count);
 
 task.complete();
 subtask.complete();
 
-console.log(task);
-console.log(subtask);
+// console.log(task);
+// console.log(subtask);
 
 // console.log(subtask instanceof SubTask);
 // console.log(subtask instanceof Task);

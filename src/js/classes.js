@@ -29,9 +29,9 @@ class Task {
     }
 }
 
-Task.count = 0;
+Task.count = 0; // свойство
 
-let task = new Task('Clean room');
+let task = new Task('Clean room'); // новый экземпляр класса
 // console.log(task.done, task._done);
 task.complete();
 // console.log(task.done, task._done);
