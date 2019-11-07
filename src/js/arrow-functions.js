@@ -115,21 +115,24 @@ let person = {
     }
 }
 
+let name = 'hhhhh'
 function test() {
     // console.log('Hello, my name is ' + this.name);
-    console.log('"this" is ', this)
-    let name = 'abc';
-    function cake(name) {
+    // console.log('"this" is ', this)
+    var name = 'abc';
+    return function cake(name) {
         console.log('"this" is ', this)
         console.log('"name" is ', name)
     };
+
     
-    person.greet();
+    
+    // person.greet();
 }
 
-console.log('let name', name);
+// console.log('let name', name);
 
-test();
+test()
 
 // let person = {
 //     name: 'Bob',

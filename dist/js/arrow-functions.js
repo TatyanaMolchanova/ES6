@@ -131,19 +131,20 @@ var person = {
     }
 };
 
+var name = 'hhhhh';
 function test() {
     // console.log('Hello, my name is ' + this.name);
-    console.log('"this" is ', this);
+    // console.log('"this" is ', this)
     var name = 'abc';
-    function cake(name) {
+    return function cake(name) {
         console.log('"this" is ', this);
         console.log('"name" is ', name);
     };
 
-    person.greet();
+    // person.greet();
 }
 
-console.log('let name', name);
+// console.log('let name', name);
 
 test();
 
